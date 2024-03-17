@@ -1,0 +1,34 @@
+arr[i] = *(arr+i) == i[arr] = *(i+arr)
+
+They both are giving same outputs: - 
+    cout << arr[5] << endl;
+    cout << *(arr+5) << endl;
+
+Only giving first element: -
+    cout << *arr << endl;
+
+It is only adding the value not the index: -
+    cout << *arr + 1 << endl;
+    
+These all denotes same thing: -
+    int a[20];
+    cout << "Address: " << &a[0] << endl;
+    cout << "Address: " << &a << endl;
+    cout << "Address: " << a << endl;
+               &
+These all are giving differenet outputs: -
+    int *p = &a[0];
+    cout << "Pointer Address: " << p << endl;
+    cout << "Pointer Value: " << *p << endl;
+    cout << "Pointer Address: " << &p << endl;
+
+SYMBOL TABLE: -
+in ST, if there is an array name "arr", then it automatically forms an address for "arr" inside the ST which cannot be changed.
+
+Imp: For integer array, cout function prints the address of the array but for the character array, it print the value of that array so that means that cout function works differently for each other(code in char_arrays.cpp).
+
+HEAP MEMORY: -
+char *ch[6] = "abcde"; //It is risky and never dare to do it
+
+SHOCKINGGGGGGGG!!!!!!
+int getSum(int arr[], int n) {} -> A poniter is passed here, arr[] is pointer here, not a complete array
